@@ -10,9 +10,9 @@ body {
 	font-size: 1em;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	min-height: 100vh;
 	margin: 0;
-	padding: 0 20em;
 	background-color: #2F4858;
 	color: #fff;
 }
@@ -40,19 +40,19 @@ nav a:hover {
 }
 
 h1 {
-	font-weight: 300;
 	font-size: 1.5em;
 }
 
 /* Organisation du main */
 main {
 	flex: 1 auto;
+	width: 50%;
 }
 
 main article.cubes {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content:space-between;
+	justify-content: space-between;
 }
 
 /* Elément du site */
@@ -63,38 +63,58 @@ main.bonjour {
 }
 
 div.cube {
-	background-color: #E88A70;
-	flex-grow: 1;
+	flex: 1 auto;
+	background-color: #CF7484;
+	color: #fff;
 	padding: 0.7em 1em;
+	margin: 0.5em;
 	border-radius: 5px;
-	margin-right: 1em;
-	margin-bottom: 1em;
 	text-align: center;
-	color: black;
 	font-weight: bolder;
 }
-
-.center {
-	margin: 0;
-	text-align: center;
+div.cube:nth-child(even) {
+	background-color:#C44F6C;
+	color: #fff;
 }
 
-.big-fontsize {
+main.center {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workinprogress {
 	font-size: 3em;
+	text-align: center;
 }
 
 /* Input */
-.bonjour-form-text {
-	padding: 0.5em 1em;
+.form-input {
+	padding: 0.3em;
 	border-radius: 5px;
 	box-shadow: inset 0 0 10px 1px #a9a9a9;
 }
 
-.bonjour-form-submit {
-	padding: 0.5em 1em;
+.form-submit {
+	padding: 0.3em 0.5em;
 	border-radius: 5px;
 }
-.bonjour-form-submit:hover {
+.form-submit:hover {
 	background-color: #ffffffd2;
 	color: #f00;
 }
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+	.workinprogress {
+		font-size: 1.5em;
+	}
+
+	.workinprogress+img {
+		width: 90vw;
+	}
+
+	main {
+		width: 90vw;
+	}
+} 

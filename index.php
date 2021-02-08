@@ -7,6 +7,7 @@
 	<title>Test PHP</title>
 	<link rel="shortcut icon" href="img/icon-castex-64.png" type="image/x-icon">
 	<link rel="stylesheet" href="style.css" />
+	<?php $total = isset($_POST['cubesNumber']) ? $_POST['cubesNumber'] : 10; ?>
 </head>
 
 <body>
@@ -16,10 +17,15 @@
 		<div><a href="/demo.php">Demo</a></div>
 	</nav>
 	<main>
-		<h1>Test d'une boucle for :</h1>
+		<h1>Nombre de cubes :
+			<form method="post">
+				<input class="form-input" type="number" name="cubesNumber" />
+				<input class="form-submit" type="submit" value="Envoyer" />
+			</form>
+		</h1>
 		<article class="cubes">
 			<?php
-			for ($i = 1; $i <= 100; $i++) {
+			for ($i = 1; $i <= $total; $i++) {
 				echo "<div class=\"cube\">$i</div>";
 			}
 			?>

@@ -15,8 +15,8 @@
 		<div><a href="/bonjour.php">Bonjour</a></div>
 		<div><a href="/demo.php">Demo</a></div>
 	</nav>
-	<main>
-		<?php echo "<h1 class=\"center big-fontsize\">⚠️Work in progress⚠️</h1>";
+	<main class="center">
+		<?php echo "<h1 class=\"workinprogress\">⚠️Work in progress⚠️</h1>";
 			/*
 			$creneaux = [];
 

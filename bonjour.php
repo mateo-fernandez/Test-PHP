@@ -19,8 +19,8 @@
 	<main class="bonjour">
 		<h1>Bonjour <?php echo $name ?></h1>
 		<form method="post">
-			<input class="bonjour-form-text" type="text" name="name" autocomplete="off" />
-			<input class="bonjour-form-submit" type="submit" value="Envoyer">
+			<input class="form-input" type="text" name="name" autocomplete="off" />
+			<input class="form-submit" type="submit" value="Envoyer">
 		</form>
 	</main>
 </body>
